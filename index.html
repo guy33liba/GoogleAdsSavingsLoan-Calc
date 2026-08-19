@@ -4,231 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ff7a18">
-  <meta name="description" content="A simple savings calculator to estimate future savings, interest earned, and progress toward a savings goal.">
-  <title>Savings Calculator | Grow Your Money</title>
+  <meta name="description" content="Free savings calculator. Estimate future savings, total contributions, interest earned and progress toward your savings goal.">
+  <meta name="robots" content="index, follow">
+  <title>Savings Calculator | Future Savings & Interest</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Add your Google AdSense account script here after approval. -->
 </head>
 <body>
   <div class="floating-shapes" aria-hidden="true">
-    <span class="float float-1">💰</span>
-    <span class="float float-2">✨</span>
-    <span class="float float-3">🪙</span>
-    <span class="float float-4">🌱</span>
-    <span class="float float-5">💵</span>
+    <span class="float float-1">💰</span><span class="float float-2">✨</span><span class="float float-3">🪙</span>
+    <span class="float float-4">🌱</span><span class="float float-5">💵</span>
   </div>
 
   <header class="app-header">
     <div class="header-inner">
-      <a class="brand" href="#calculator" aria-label="Savings Calculator home">
-        <span class="brand-icon">💰</span>
-        <span>Savings Calculator</span>
-      </a>
-      <span class="header-badge">Simple • Fast • Free</span>
+      <a class="brand" href="#calculator" aria-label="Savings Calculator home"><span class="brand-icon">💰</span><span>Savings Calculator</span></a>
+      <span class="header-badge">Free • Fast • Simple</span>
     </div>
   </header>
 
   <main class="app-shell">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="eyebrow">🌱 Grow your future</p>
-        <h1 id="page-title">See how your savings can grow</h1>
-        <p class="hero-text">Enter a few numbers and instantly see your future balance, contributions, interest earned, and progress toward your goal.</p>
-        <div class="hero-pills" aria-label="Calculator benefits">
-          <span>⚡ Instant results</span>
-          <span>📱 Mobile friendly</span>
-          <span>🎯 Goal tracking</span>
-        </div>
+        <p class="eyebrow">🌱 Plan your savings</p>
+        <h1 id="page-title">See how your money can grow</h1>
+        <p class="hero-text">Enter your savings, monthly deposit, rate and time. Get the result instantly.</p>
+        <a class="hero-cta" href="#calculator">Calculate now ↓</a>
       </div>
-
       <div class="hero-visual" aria-hidden="true">
-        <div class="coin coin-a">$</div>
-        <div class="coin coin-b">$</div>
-        <div class="plant">
-          <div class="leaf leaf-left"></div>
-          <div class="leaf leaf-right"></div>
-          <div class="stem"></div>
-          <div class="pot">💰</div>
-        </div>
+        <div class="coin coin-a">$</div><div class="coin coin-b">$</div>
+        <div class="plant"><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="stem"></div><div class="pot">💰</div></div>
       </div>
     </section>
 
+    <aside class="ad-slot ad-slot-top" aria-label="Advertisement">
+      <span>Advertisement</span>
+      <div class="ad-placeholder"><!-- Paste a responsive AdSense ad unit here. --></div>
+    </aside>
+
     <section class="app-section" id="calculator">
-      <div class="section-header">
-        <div>
-          <p class="section-eyebrow">Savings plan</p>
-          <h2 class="section-title">Build your calculation</h2>
-        </div>
-        <span class="section-icon" aria-hidden="true">🧮</span>
-      </div>
+      <div class="section-header"><div><p class="section-eyebrow">Savings plan</p><h2 class="section-title">Enter your numbers</h2></div><span class="section-icon" aria-hidden="true">🧮</span></div>
 
       <form id="savings-form" class="calculator-card" novalidate>
         <div class="form-grid">
-          <div class="field">
-            <label for="initial">Current savings</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input id="initial" name="initial" type="number" min="0" step="100" value="5000" inputmode="decimal" required>
-            </div>
-            <p class="field-help">Money you already have saved.</p>
-          </div>
-
-          <div class="field">
-            <label for="monthly">Monthly contribution</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input id="monthly" name="monthly" type="number" min="0" step="10" value="500" inputmode="decimal" required>
-            </div>
-            <p class="field-help">How much you plan to add each month.</p>
-          </div>
-
-          <div class="field">
-            <label for="rate">Annual interest / return</label>
-            <div class="input-wrap input-wrap-suffix">
-              <input id="rate" name="rate" type="number" min="0" max="100" step="0.1" value="5" inputmode="decimal" required>
-              <span class="input-suffix">%</span>
-            </div>
-            <p class="field-help">Estimated yearly growth rate.</p>
-          </div>
-
-          <div class="field">
-            <label for="years">Saving period</label>
-            <div class="input-wrap input-wrap-suffix">
-              <input id="years" name="years" type="number" min="1" max="80" step="1" value="10" inputmode="numeric" required>
-              <span class="input-suffix">years</span>
-            </div>
-            <p class="field-help">How long your money can grow.</p>
-          </div>
-
-          <div class="field field-wide">
-            <label for="goal">Savings goal <span class="optional">(optional)</span></label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input id="goal" name="goal" type="number" min="0" step="100" value="100000" inputmode="decimal">
-            </div>
-            <p class="field-help">Add a target to see how close this plan gets you.</p>
-          </div>
+          <div class="field"><label for="initial">Current savings</label><div class="input-wrap"><span class="input-prefix">$</span><input id="initial" name="initial" type="number" min="0" step="100" value="5000" inputmode="decimal" required></div></div>
+          <div class="field"><label for="monthly">Monthly deposit</label><div class="input-wrap"><span class="input-prefix">$</span><input id="monthly" name="monthly" type="number" min="0" step="10" value="500" inputmode="decimal" required></div></div>
+          <div class="field"><label for="rate">Annual return</label><div class="input-wrap input-wrap-suffix"><input id="rate" name="rate" type="number" min="0" max="100" step="0.1" value="5" inputmode="decimal" required><span class="input-suffix">%</span></div></div>
+          <div class="field"><label for="years">Saving period</label><div class="input-wrap input-wrap-suffix"><input id="years" name="years" type="number" min="1" max="80" step="1" value="10" inputmode="numeric" required><span class="input-suffix">years</span></div></div>
+          <div class="field field-wide"><label for="goal">Savings goal <span class="optional">optional</span></label><div class="input-wrap"><span class="input-prefix">$</span><input id="goal" name="goal" type="number" min="0" step="100" value="100000" inputmode="decimal"></div></div>
         </div>
-
         <div id="form-error" class="form-error" role="alert" hidden></div>
-
-        <div class="action-row">
-          <button class="btn-secondary" type="button" id="reset-btn">↺ Reset</button>
-          <button class="btn-primary" type="submit">Calculate savings 🚀</button>
-        </div>
+        <div class="action-row"><button class="btn-secondary" type="button" id="reset-btn">↺ Reset</button><button class="btn-primary" type="submit">Calculate savings 🚀</button></div>
       </form>
     </section>
 
     <section class="app-section results-section" id="results" aria-live="polite">
-      <div class="section-header">
-        <div>
-          <p class="section-eyebrow">Your projection</p>
-          <h2 class="section-title">Your savings future</h2>
-        </div>
-        <span class="section-icon" aria-hidden="true">✨</span>
-      </div>
-
-      <article class="balance-card">
-        <p class="balance-label">Estimated balance</p>
-        <p class="balance-value" id="future-balance">$0</p>
-        <p class="balance-note" id="balance-note">after 0 years</p>
-
-        <div class="goal-progress" id="goal-progress-wrap">
-          <div class="progress-heading">
-            <span>🎯 Goal progress</span>
-            <strong id="goal-percent">0%</strong>
-          </div>
-          <div class="progress-track" role="progressbar" aria-label="Savings goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="progress-fill" id="goal-progress"></div>
-          </div>
-          <p class="goal-message" id="goal-message"></p>
-        </div>
-      </article>
+      <div class="section-header"><div><p class="section-eyebrow">Your result</p><h2 class="section-title">Savings projection</h2></div><span class="section-icon" aria-hidden="true">✨</span></div>
+      <article class="balance-card"><p class="balance-label">Estimated balance</p><p class="balance-value" id="future-balance">$0</p><p class="balance-note" id="balance-note">after 0 years</p><div class="goal-progress" id="goal-progress-wrap"><div class="progress-heading"><span>🎯 Goal progress</span><strong id="goal-percent">0%</strong></div><div class="progress-track" role="progressbar" aria-label="Savings goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="goal-progress"></div></div><p class="goal-message" id="goal-message"></p></div></article>
 
       <div class="stats-grid">
-        <article class="stat-card stat-orange">
-          <span class="stat-icon">💵</span>
-          <p>Total you put in</p>
-          <strong id="total-contributions">$0</strong>
-        </article>
-        <article class="stat-card stat-green">
-          <span class="stat-icon">📈</span>
-          <p>Interest earned</p>
-          <strong id="interest-earned">$0</strong>
-        </article>
-        <article class="stat-card stat-purple">
-          <span class="stat-icon">🗓️</span>
-          <p>Monthly saving</p>
-          <strong id="monthly-result">$0</strong>
-        </article>
+        <article class="stat-card stat-orange"><span class="stat-icon">💵</span><p>Total contributed</p><strong id="total-contributions">$0</strong></article>
+        <article class="stat-card stat-green"><span class="stat-icon">📈</span><p>Interest earned</p><strong id="interest-earned">$0</strong></article>
+        <article class="stat-card stat-purple"><span class="stat-icon">🗓️</span><p>Monthly deposit</p><strong id="monthly-result">$0</strong></article>
       </div>
 
-      <article class="breakdown-card">
-        <div class="breakdown-header">
-          <div>
-            <p class="section-eyebrow">Growth breakdown</p>
-            <h3>Where your final balance comes from</h3>
-          </div>
-          <span aria-hidden="true">🌈</span>
-        </div>
-        <div class="breakdown-bar" aria-hidden="true">
-          <div class="bar-contributions" id="bar-contributions"></div>
-          <div class="bar-interest" id="bar-interest"></div>
-        </div>
-        <div class="legend">
-          <span><i class="legend-dot contributions-dot"></i> Contributions <strong id="legend-contributions">0%</strong></span>
-          <span><i class="legend-dot interest-dot"></i> Interest <strong id="legend-interest">0%</strong></span>
-        </div>
-      </article>
+      <article class="breakdown-card"><div class="breakdown-header"><div><p class="section-eyebrow">Breakdown</p><h3>Where the money comes from</h3></div><span aria-hidden="true">🌈</span></div><div class="breakdown-bar" aria-hidden="true"><div class="bar-contributions" id="bar-contributions"></div><div class="bar-interest" id="bar-interest"></div></div><div class="legend"><span><i class="legend-dot contributions-dot"></i> Contributions <strong id="legend-contributions">0%</strong></span><span><i class="legend-dot interest-dot"></i> Interest <strong id="legend-interest">0%</strong></span></div></article>
     </section>
 
-    <section class="app-section">
-      <div class="section-header">
-        <div>
-          <p class="section-eyebrow">Year by year</p>
-          <h2 class="section-title">Watch your savings climb</h2>
-        </div>
-        <span class="section-icon" aria-hidden="true">🪜</span>
-      </div>
-      <div class="timeline-card" id="timeline"></div>
+    <aside class="ad-slot" aria-label="Advertisement"><span>Advertisement</span><div class="ad-placeholder"><!-- Paste a responsive AdSense ad unit here. --></div></aside>
+
+    <section class="app-section"><div class="section-header"><div><p class="section-eyebrow">Year by year</p><h2 class="section-title">Growth over time</h2></div><span class="section-icon" aria-hidden="true">📊</span></div><div class="timeline-card" id="timeline"></div></section>
+
+    <section class="app-section"><div class="tips-card"><div class="tips-heading"><span class="tips-emoji">💡</span><div><p class="section-eyebrow">Quick tip</p><h2>Try a slightly higher monthly deposit</h2></div></div><p id="tip-text">A small monthly increase can make a noticeable difference over time.</p><button class="btn-ghost" id="boost-btn" type="button">Try +$50/month ✨</button></div></section>
+
+    <section class="app-section info-grid" aria-label="How this savings calculator works">
+      <article class="info-card"><span>🧠</span><h3>Monthly compounding</h3><p>Interest is estimated monthly using the annual return you enter.</p></article>
+      <article class="info-card"><span>🎯</span><h3>Goal tracking</h3><p>Add a target to see how close your plan gets.</p></article>
+      <article class="info-card"><span>🔁</span><h3>Compare plans</h3><p>Change one number and calculate again to compare scenarios.</p></article>
     </section>
 
-    <section class="app-section">
-      <div class="tips-card">
-        <div class="tips-heading">
-          <span class="tips-emoji">💡</span>
-          <div>
-            <p class="section-eyebrow">Savings tip</p>
-            <h2>Small increases can make a big difference</h2>
-          </div>
-        </div>
-        <p id="tip-text">Try increasing your monthly contribution by even a small amount and calculate again to see the long-term effect.</p>
-        <button class="btn-ghost" id="boost-btn" type="button">Add $50/month and compare ✨</button>
-      </div>
-    </section>
+    <aside class="ad-slot ad-slot-bottom" aria-label="Advertisement"><span>Advertisement</span><div class="ad-placeholder"><!-- Paste a responsive AdSense ad unit here. --></div></aside>
 
-    <section class="app-section info-grid" aria-label="Savings calculator information">
-      <article class="info-card">
-        <span>🧠</span>
-        <h3>Compound growth</h3>
-        <p>This calculator assumes monthly compounding, so previous interest can also earn future interest.</p>
-      </article>
-      <article class="info-card">
-        <span>🎯</span>
-        <h3>Use a real goal</h3>
-        <p>A concrete target makes it easier to test different monthly contributions and time periods.</p>
-      </article>
-      <article class="info-card">
-        <span>🔁</span>
-        <h3>Try scenarios</h3>
-        <p>Change one number at a time to see which part of your plan has the biggest impact.</p>
-      </article>
-    </section>
+    <section class="app-section compact-note" aria-labelledby="about-title"><h2 id="about-title">About this calculator</h2><p>This free calculator estimates future savings using your starting balance, monthly deposits and an estimated annual return. Results are estimates, not financial advice.</p></section>
   </main>
 
-  <footer class="app-footer">
-    <p>💰 Savings Calculator — estimates are for planning and educational purposes only.</p>
-  </footer>
-
+  <footer class="app-footer"><nav aria-label="Footer"><a href="#calculator">Calculator</a><a href="privacy.html">Privacy</a></nav><p>© Savings Calculator</p></footer>
   <script src="app.js"></script>
 </body>
 </html>
